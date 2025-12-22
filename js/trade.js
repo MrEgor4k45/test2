@@ -1,27 +1,48 @@
+const ADMIN = "Admin-gag-shop";
 const form = document.getElementById("tradeForm");
-const orders = document.getElementById("orders");
+const ordersDiv = document.getElementById("orders");
+const adminInput = document.getElementById("adminToken");
 
-let data = JSON.parse(localStorage.getItem("tradeOrders")) || [];
+let orders = JSON.parse(localStorage.getItem("trade")) || [];
 
-render();
+function save() {
+  localStorage.setItem("trade", JSON.stringify(orders));
+}
 
-form.onsubmit = (e) => {
+function render() {
+  ordersDiv.innerHTML = "";
+  orders.forEach((o, i) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<b>${o.nick}</b><br>${o.offer} ➜ ${o.want}`;
+
+    if (adminInput.value === ADMIN) {
+      const del = document.createElement("button");
+      del.textContent = "❌ Удалить";
+      del.style.background = "#dc2626";
+      del.onclick = () => {
+        orders.splice(i, 1);
+        save();
+        render();
+      };
+      card.appendChild(del);
+    }
+
+    ordersDiv.appendChild(card);
+  });
+}
+
+form.onsubmit = e => {
   e.preventDefault();
-
-  data.push({
+  orders.push({
     nick: nick.value,
     offer: offer.value,
     want: want.value
   });
-
-  localStorage.setItem("tradeOrders", JSON.stringify(data));
-  form.reset();
+  save();
   render();
+  form.reset();
 };
 
-function render() {
-  orders.innerHTML = "";
-  data.forEach(o => {
-    orders.innerHTML += `<p><b>${o.nick}</b>: ${o.offer} ↔ ${o.want}</p>`;
-  });
-}
+adminInput.oninput = render;
+render();
