@@ -1,22 +1,26 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Обмен</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Подача заявки на обмен</h2>
+<div class="container">
+  <h2>🔁 Обмен</h2>
 
-<form id="tradeForm">
-  <input id="nick" placeholder="Ваш ник" required>
-  <input id="offer" placeholder="Что отдаёте" required>
-  <input id="want" placeholder="Что хотите" required>
-  <button type="submit">Отправить</button>
-</form>
+  <form id="tradeForm">
+    <input id="nick" placeholder="Ваш ник" required>
+    <input id="offer" placeholder="Что отдаёте" required>
+    <input id="want" placeholder="Что хотите" required>
+    <button>Отправить заявку</button>
+  </form>
 
-<h3>Все заявки</h3>
-<div id="orders"></div>
+  <h3>Заявки</h3>
+  <div id="orders"></div>
+
+  <button class="back" onclick="location.href='index.html'">⬅ Назад</button>
+</div>
 
 <script src="js/trade.js"></script>
 </body>
