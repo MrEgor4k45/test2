@@ -1,21 +1,25 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Продать</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Подача заявки на продажу</h2>
+<div class="container">
+  <h2>💰 Продажа</h2>
 
-<form id="sellForm">
-  <input id="nick" placeholder="Ваш ник" required>
-  <input id="item" placeholder="Что продаёте" required>
-  <button type="submit">Отправить</button>
-</form>
+  <form id="sellForm">
+    <input id="nick" placeholder="Ваш ник" required>
+    <input id="item" placeholder="Что продаёте" required>
+    <button>Отправить заявку</button>
+  </form>
 
-<h3>Все заявки</h3>
-<div id="orders"></div>
+  <h3>Заявки</h3>
+  <div id="orders"></div>
+
+  <button class="back" onclick="location.href='index.html'">⬅ Назад</button>
+</div>
 
 <script src="js/sell.js"></script>
 </body>
