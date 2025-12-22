@@ -34,7 +34,10 @@ function render() {
 
 form.onsubmit = e => {
   e.preventDefault();
-  orders.push({ nick: nick.value, item: item.value });
+  orders.push({
+    nick: nick.value,
+    item: item.value
+  });
   save();
   render();
   form.reset();
