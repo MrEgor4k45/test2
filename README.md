@@ -2,14 +2,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Grow a Garden</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Grow a Garden</h1>
+<div class="container">
+  <h1>🌱 Grow a Garden</h1>
 
-<a href="buy.html"><button>Купить</button></a>
-<a href="sell.html"><button>Продать</button></a>
-<a href="trade.html"><button>Обменять</button></a>
+  <div class="menu">
+    <button onclick="location.href='buy.html'">🛒 Купить</button>
+    <button onclick="location.href='sell.html'">💰 Продать</button>
+    <button onclick="location.href='trade.html'">🔁 Обменять</button>
+  </div>
+</div>
 
 </body>
 </html>
