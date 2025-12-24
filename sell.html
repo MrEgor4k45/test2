@@ -1,28 +1,31 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Продать</title>
+  <title>NovaMarket — Продать</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-  <h2>💰 Продать</h2>
+<header>
+  <h1>NovaMarket</h1>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="buy.html">Купить</a>
+    <a href="sell.html">Продать</a>
+  </nav>
+</header>
 
-  <form id="sellForm">
-    <input id="nick" placeholder="Ник" required>
-    <input id="item" placeholder="Что продать" required>
-    <button>Отправить</button>
-  </form>
+<main class="center">
+  <h2>Продать товар</h2>
+  <input placeholder="Название товара">
+  <input placeholder="Цена">
+  <button>Отправить</button>
+</main>
 
-  <input id="adminToken" placeholder="Админ токен">
+<footer>
+  <p>📨 TG: @MR_Egor4k</p>
+  <p>🎮 DS: na_testosterone5x30</p>
+</footer>
 
-  <h3>Заявки</h3>
-  <div id="orders"></div>
-
-  <button class="back" onclick="location.href='index.html'">⬅ Назад</button>
-</div>
-
-<script src="js/sell.js"></script>
 </body>
 </html>
