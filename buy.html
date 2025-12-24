@@ -1,28 +1,38 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Купить</title>
+  <title>NovaMarket — Купить</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-  <h2>🛒 Купить</h2>
+<header>
+  <h1>NovaMarket</h1>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="buy.html">Купить</a>
+    <a href="sell.html">Продать</a>
+  </nav>
+</header>
 
-  <form id="buyForm">
-    <input id="nick" placeholder="Ник" required>
-    <input id="item" placeholder="Что купить" required>
-    <button>Отправить</button>
-  </form>
+<main class="grid">
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Товар 1</h3>
+    <button>Купить</button>
+  </div>
 
-  <input id="adminToken" placeholder="Админ токен">
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Товар 2</h3>
+    <button>Купить</button>
+  </div>
+</main>
 
-  <h3>Заявки</h3>
-  <div id="orders"></div>
+<footer>
+  <p>📨 TG: @MR_Egor4k</p>
+  <p>🎮 DS: na_testosterone5x30</p>
+</footer>
 
-  <button class="back" onclick="location.href='index.html'">⬅ Назад</button>
-</div>
-
-<script src="js/buy.js"></script>
 </body>
 </html>
