@@ -1,25 +1,23 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>NovaMarket — Продать</title>
+  <title>NovaMarket — Sell</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>NovaMarket</h1>
-  <nav>
-    <a href="index.html">Главная</a>
-    <a href="buy.html">Купить</a>
-    <a href="sell.html">Продать</a>
-  </nav>
+  <h1 class="logo">🌸 NovaMarket</h1>
+  <a href="index.html">← Назад</a>
 </header>
 
-<main class="center">
-  <h2>Продать товар</h2>
+<main class="page">
+  <h2>Продажа</h2>
+
+  <input id="token" placeholder="Админ токен">
   <input placeholder="Название товара">
   <input placeholder="Цена">
-  <button>Отправить</button>
+  <button class="btn blue" onclick="checkToken()">Добавить</button>
 </main>
 
 <footer>
@@ -27,5 +25,6 @@
   <p>🎮 DS: na_testosterone5x30</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
