@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(135deg, #0f172a, #1e1b4b);
+  background: radial-gradient(circle at top, #1e1b4b, #020617);
   color: #fff;
 }
 
@@ -18,25 +18,39 @@ header {
 
 .logo {
   color: #f9a8d4;
+  text-shadow: 0 0 10px #f472b6;
 }
 
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
+}
+
+.anime-bg {
+  background-image: url("https://images.unsplash.com/photo-1549693578-d683be217e58");
+  background-size: cover;
+  background-position: center;
 }
 
 .buttons {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .btn {
-  padding: 15px 35px;
-  border-radius: 30px;
+  padding: 15px 40px;
+  border-radius: 999px;
   text-decoration: none;
   color: white;
   font-weight: bold;
   margin: 10px;
   display: inline-block;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(236,72,153,0.8);
 }
 
 .pink {
@@ -48,19 +62,27 @@ header {
 }
 
 .page {
-  padding: 30px;
+  padding: 40px;
   text-align: center;
 }
 
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 16px;
-  display: inline-block;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
 }
 
-.card img {
-  width: 200px;
+.anime-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(249,168,212,0.3);
+}
+
+.anime-card img {
+  width: 100%;
+  border-radius: 15px;
 }
 
 input {
@@ -69,19 +91,12 @@ input {
   padding: 12px;
   border-radius: 12px;
   border: none;
-  width: 250px;
+  width: 260px;
 }
 
 footer {
-  margin-top: 50px;
   text-align: center;
   padding: 15px;
-  background: rgba(0,0,0,0.3);
-}
-
-/* 📱 */
-@media (max-width: 768px) {
-  .btn {
-    width: 80%;
-  }
+  background: rgba(0,0,0,0.4);
+  margin-top: 40px;
 }
